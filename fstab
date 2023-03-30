@@ -1,0 +1,8 @@
+#
+UUID=80b3e64c-379e-4297-a6a1-356635495cfc     /           xfs    defaults,noatime  1   1
+
+#Mount EFS on boot
+
+fs-0371fe1cea8f78d81.efs.us-east-1.amazonaws.com:/ /efs nfs4 defaults,_netdev 0 0
+
+#----------------
