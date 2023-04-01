@@ -1,8 +1,0 @@
-   Active: active (running) since Thu 2023-03-30 20:35:29 UTC; 3s ago
-O servidor está online.
-   Active: active (running) since Thu 2023-03-30 20:35:29 UTC; 4s ago
-O servidor está online.
-   Active: active (running) since Thu 2023-03-30 20:35:29 UTC; 4s ago
-O servidor está online.
-   Active: active (running) since Thu 2023-03-30 20:36:18 UTC; 9s ago
-O servidor está online.

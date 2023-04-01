@@ -1,3 +1,21 @@
-#systemctl status httpd | grep "inactive" >> server-inactive.txt && echo -e "\nO servidor está inativo!\n" || grep "active" >> server-active.txt && echo -e "\nO servidor está ativo\n";
+#Script de health check do servidor Apache
 
-systemctl status httpd | grep "inactive" >> teste-off.txt && echo -e "O servidor esta offline." >> teste-off.txt || (systemctl status httpd | grep "active" >> teste-on.txt && echo -e "O servidor está online." >> teste-on.txt)
+#OLD SCRIPT
+
+#systemctl status httpd | grep "inactive" >> /efs/mateus/teste-off.txt && echo -e "O servidor esta offline." >> /efs/mateus/teste-off.txt || 
+#(systemctl status httpd | grep "active" >> /efs/mateus/teste-on.txt && echo -e "O servidor está online." >> /efs/mateus/teste-on.txt)
+
+#-----------------
+
+SERVICE="$(systemctl is-active httpd)"
+DATE="$(date +'%A, %b %d, %Y %H:%M:%S')"
+
+if [ "${SERVICE}" = "active" ]; then
+	DIR='/efs/mateus/server-online-logs.txt'
+	TEXT="APACHE2 Server is ONLINE @ "
+else
+	DIR='/efs/mateus/server-offline-logs.txt'
+	TEXT="APACHE2 Server is OFFLINE @ "
+fi
+
+echo "$TEXT$DATE" >> "$DIR"

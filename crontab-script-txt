@@ -1,0 +1,4 @@
+# Rodar script de health check
+
+*/5 * * * * bash /efs/mateus/health-check-apache.sh
+
